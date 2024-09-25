@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Manager</title>
+    <style>
+      html {
+        width: 280px;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 5px;
+        text-align: center;
+        background-color: #ececec;
+      }
+      form {
+        height: 320px;
+        background-color: white;
+        border-radius: 15px;
+        padding: 10px;
+        padding-top: 10px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      label {
+        display: block;
+        font-size: 14px;
+        line-height: 14px;
+      }
+      button {
+        width: 150px;
+        padding: 5px 10px;
+        margin-top: 20px;
+        background-color: #073d2f;
+        border-radius: 15px;
+        color: white;
+        border: none;
+      }
+      button:hover {
+        background-color: #0c6950;
+      }
+      small {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+      input[type="checkbox"] {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+      #time-interval {
+        text-align: center;
+      }
+      #time-interval input {
+        width: 90%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/zendesk_icon_48px.png" />
+    <div class="header">
+      <h4>AGENT MANAGER</h4>
+    </div>
+
+    <form>
+      <div id="time-interval">
+        <label for="interval"> Intervalo de atualização (segundos) </label>
+        <input type="number" id="interval" value="5" min="1" max="60" />
+      </div>
+
+      <div id="checkboxes">
+        <small>Selecione os campos para ocultá-los</small>
+
+        <label for="requester_field">
+          <input type="checkbox" value="requester_field" id="requester_field" />
+          Solicitante
+        </label>
+
+        <label for="brand_field">
+          <input type="checkbox" value="brand_field" id="brand_field" />
+          Marca
+        </label>
+
+        <label for="collaborators_field">
+          <input type="checkbox" value="collaborators_field" id="collaborators_field" />
+          Seguidores
+        </label>
+
+        <label for="ticket_form_field">
+          <input type="checkbox" value="ticket_form_field" id="ticket_form_field" />
+          Formulário
+        </label>
+
+        <label for="sharing_field">
+          <input type="checkbox" value="sharing_field" id="sharing_field" />
+          Compartilhando
+        </label>
+
+        <label for="tags_field">
+          <input type="checkbox" value="tags_field" id="tags_field" />
+          Tags
+        </label>
+
+        <label for="habilities_field">
+          <input type="checkbox" value="habilities_field" id="habilities_field" />
+          Habilidades
+        </label>
+      </div>
+
+      <button id="btn_save">SALVAR</button>
+    </form>
+    <script src="popup.js"></script>
+  </body>
+</html>
